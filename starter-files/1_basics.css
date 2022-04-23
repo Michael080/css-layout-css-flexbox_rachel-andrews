@@ -9,7 +9,15 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: row; /* *note* if reversed screen readers still follow html */
     
+    /* modify text-direction */
+    /* direction: rtl; */
+
+    /* display text vertically */
+    writing-mode: vertical-rl;
+    /* *note ^^^* baseline ALWAYS on left-side for 'rl' || 'lr'*/ 
 }
 
 .item {
