@@ -10,7 +10,9 @@ body {
 
 .container {
     display: flex;
-    align-items: baseline;
+    /*  *note* align-content affects spacing of wrapped items */
+    /* align-content: space-between; */
+    align-items: baseline; /* *default: stretch */
 }
 
 .item:first-child {
@@ -26,4 +28,5 @@ body {
     border: 5px solid rgb(17, 105, 121);
     background-color: rgba(17, 105, 121,.1);
     border-radius: 5px;
+    flex:1 1 300px;
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 2</title>
+  <style>
+    ul {
+      font-family: sans-serif;
+      color: white;
+      width: 600px;
+    }
+
+    li {
+      list-style-type: none;
+      background-color: #4d7298;
+      border: 2px solid #77a6b6;
+      border-radius: .5em;
+    }
+
+    /* my styles */
+    ul {
+      display: flex;
+    }
+
+    li {
+      flex: 1 1; 
+    }
+
+    /* add'l question/s */
+    /* Can you make the first item twice the size of the other items? */
+    li:nth-child(2) {
+      flex: 2 1;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>I am small</li>
+    <li>I have more content than the very small item.</li>
+    <li>I have lots of content. So much content that I don't know where it is all going to go. I'm glad that CSS is pretty good at dealing with situations where we end up with more words than expected!</li>
+  </ul>
+</body>
+</html>

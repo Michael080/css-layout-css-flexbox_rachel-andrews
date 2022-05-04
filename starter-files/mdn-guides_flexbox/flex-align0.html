@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox align 0 — starting code</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 70%;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+
+    button {
+      font-size: 18px;
+      line-height: 1.5;
+      width: 15%;
+    }
+
+    div {
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    /* Add your flexbox CSS below here */
+
+    div {
+      display: flex;
+      /* default value of align-items is 'stretch' */
+      align-items: center;
+      
+      /* default value of justify-content is 'stretch' */
+      justify-content: space-around;
+      align-items: flex-end;
+
+    }
+
+    /* change position on cross-axis of single flex-item */
+    button:last-child {
+      align-self: flex-start;
+    }
+
+    button:first-child {
+      /* default value of order is '0', items w/ same order val. are displayed in "source order" */
+      /* *note* order values can be negative*/
+      order: 1;
+    }    
+  
+  </style>
+</head>
+<body>
+  <div>
+    <button>Smile</button>
+    <button>Laugh</button>
+    <button>Wink</button>
+    <button>Shrug</button>
+    <button>Blush</button>
+  </div>
+</body>
+</html>

@@ -8,9 +8,37 @@ body {
     margin: 1em auto;
 }
 
+p {
+    /* white-space: nowrap; */
+    /* overflow-wrap:; */
+    /* overflow:scroll; */
+}
+
+/* 
+default properties of a flex-container for reference (MDN docs)
+
+    * Items display in a row (the flex-direction property's default is row).
+    * The items start from the start edge of the main axis.
+    * The items do not stretch on the main dimension, but can shrink.
+    * The items will stretch to fill the size of the cross axis.
+    * The flex-basis property is set to auto.
+    * The flex-wrap property is set to nowrap.
+*/
+/* make flex */
+.container {
+    /* this creates a series of horizontal containers that are very cramped if wrapping is not set */
+    display: flex;
+    flex-wrap: wrap; /* containers displayed as columns because wrap */
+    /* *note* 'wrap' makes flex-items appear as if they are NOT flex-items */
+    /* flex-wrap:nowrap;  */
+    /* flex-direction: column; */
+}
+
 .item {
     padding: 10px;
     border: 5px solid rgb(17, 105, 121);
     border-radius: 5px;
     margin-bottom: 1em;
+    /* syntax: <flex-grow> <flex-shrink> || <flex-basis> */
+    flex: 1 1 300px; /* *note* flex-basis is optional */ 
 }

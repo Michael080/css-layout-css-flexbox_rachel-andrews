@@ -25,3 +25,10 @@
     border-radius: 5px;
   }
   
+  /* my styles */
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

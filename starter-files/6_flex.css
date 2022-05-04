@@ -8,14 +8,50 @@ body {
     margin: 1em auto;
 }
 
-.container {
+.container, .container-control, .container-inline {
     display: flex;
     border: 5px solid grey;
 }
 
-.item {
+.item, .item-control, .item-inline {
     padding: 10px;
     border: 5px solid rgb(17, 105, 121);
     background-color: rgba(17, 105, 121,.1);
     border-radius: 5px;
+}
+
+/* my styles (lesson 6)- flex lesson */
+
+.item:first-child {
+    /* flex: 1 1 auto; */
+}
+
+.item {
+    /* flex: 1 1 0; */
+}
+
+/* reset to flex: 0 1 auto for following lesson */
+.item:first-child {
+    /* flex: initial; */
+}
+.item {
+    /* flex: initial; */
+}
+
+
+/* my styles (lesson 7) - default values */
+
+/* some handy shorthand values */
+/* *note* W3C spec suggests using these default values unless there is a special circumstance where they are not doing what you need them to */
+.item {
+    flex: auto; /* === flex: 1 1 auto; - handy shorthand */
+
+    /* reset item to flex: 0 1 auto */
+    flex: initial;
+
+    /* make item "inflexible" e.g. flex 0 0 auto */
+    /* flex: none; */
+
+    /* make item with ONLY flex-grow (creates equal-sized items) */
+    flex: 1;
 }
